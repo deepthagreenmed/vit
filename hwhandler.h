@@ -21,6 +21,11 @@
 #include <QEventLoop>
 #include <QTime>
 
+#if defined MAKE_TEST_LIB
+    #define TEST_LIB_EXPORT Q_DECL_EXPORT
+#else
+    #define TEST_LIB_EXPORT Q_DECL_IMPORT
+#endif
 
 #define XPAR_AXI_COMBINED_BASEADDR 0x43C40000;
 #define MAP_SIZE 4096UL
