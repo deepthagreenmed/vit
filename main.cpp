@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-//#include "plotupdater.h"
 #include "keypad.h"
 
 #include <QApplication>
