@@ -36,8 +36,8 @@ MainWindow::MainWindow(QWidget *parent)
 
      key = new keypad;
 
-     h.vit_on(periodms);
      h.vit_ontime(timeon);
+     h.vit_on(periodms);
 //    key->show();
 
 
