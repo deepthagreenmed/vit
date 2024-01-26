@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "plotupdater.h"
+//#include "plotupdater.h"
 #include "keypad.h"
 
 #include <QApplication>
@@ -13,19 +13,13 @@
 #include <QtWidgets>
 #include <QwtScaleWidget>
 
-#include <qwt_plot.h>
-#include <qwt_plot_curve.h>
-#include <qwt_scale_draw.h>
-#include <qwt_plot_canvas.h>
-#include <qwt_plot_grid.h>
-#include <qwt_symbol.h>
-#include <qwt_legend.h>
-
-#if defined MAKE_VIT_LIB
-    #define TEST_VIT_EXPORT Q_DECL_EXPORT
-#else
-    #define TEST_VIT_EXPORT Q_DECL_IMPORT
-#endif
+//#include <qwt_plot.h>
+//#include <qwt_plot_curve.h>
+//#include <qwt_scale_draw.h>
+//#include <qwt_plot_canvas.h>
+//#include <qwt_plot_grid.h>
+//#include <qwt_symbol.h>
+//#include <qwt_legend.h>
 
 
 int main(int argc, char **argv) {
@@ -43,35 +37,35 @@ int main(int argc, char **argv) {
     QVBoxLayout *layout = new QVBoxLayout(centralWidget);
 
     // Create a QwtPlot widget
-    QwtPlot *plot = new QwtPlot(centralWidget);
+//    QwtPlot *plot = new QwtPlot(centralWidget);
 
-    QwtPlotCanvas *canvas = new QwtPlotCanvas();
-    canvas->setPalette(Qt::white);
-    plot->setCanvas(canvas);
+//    QwtPlotCanvas *canvas = new QwtPlotCanvas();
+//    canvas->setPalette(Qt::white);
+//    plot->setCanvas(canvas);
 
-    layout->addWidget(plot);
+  //  layout->addWidget(plot);
     layout->addWidget(key);
 
     // Create a curve to be plotted
-    QwtPlotCurve *curve = new QwtPlotCurve("Vit Graph");
+//    QwtPlotCurve *curve = new QwtPlotCurve("Vit Graph");
 
-    QColor color(Qt::green);
-    curve->setStyle(QwtPlotCurve::Lines);
-    curve->setPen(QPen(color, 2));
+//    QColor color(Qt::green);
+//    curve->setStyle(QwtPlotCurve::Lines);
+//    curve->setPen(QPen(color, 2));
 
-    // Attach the curve to the plot
-    curve->attach(plot);
+//    // Attach the curve to the plot
+//    curve->attach(plot);
 
-    QwtPlot::Axis axis = QwtPlot::xBottom;
-    QwtScaleWidget *sw = plot->axisWidget(axis);
-    sw->setPalette(Qt::green);
+//    QwtPlot::Axis axis = QwtPlot::xBottom;
+//    QwtScaleWidget *sw = plot->axisWidget(axis);
+//    sw->setPalette(Qt::green);
 
-    QwtPlot::Axis axis2 = QwtPlot::yLeft;
-    QwtScaleWidget *sw2 = plot->axisWidget(axis2);
-    sw2->setPalette(Qt::green);
+//    QwtPlot::Axis axis2 = QwtPlot::yLeft;
+//    QwtScaleWidget *sw2 = plot->axisWidget(axis2);
+//    sw2->setPalette(Qt::green);
 
-    // Create an object to handle dynamic updates of the plot
-    PlotUpdater plotUpdater(curve, plot);
+//    // Create an object to handle dynamic updates of the plot
+//    PlotUpdater plotUpdater(curve, plot);
 
     QHBoxLayout *layout2 = new QHBoxLayout;
 
@@ -94,14 +88,14 @@ int main(int argc, char **argv) {
     layout->addWidget(subWidget);
 
 
-    // Set the range and scale of the x-axis
-    plot->setAxisScale(QwtPlot::xBottom, 0, 10000, 50);
+//    // Set the range and scale of the x-axis
+//    plot->setAxisScale(QwtPlot::xBottom, 0, 10000, 50);
 
-    // Set the range and scale of the y-axis
-    plot->setAxisScale(QwtPlot::yLeft, 0, 20, 1);
+//    // Set the range and scale of the y-axis
+//    plot->setAxisScale(QwtPlot::yLeft, 0, 20, 1);
 
-    // Redraw the plot with the updated axis limits
-    plot->replot();
+//    // Redraw the plot with the updated axis limits
+//    plot->replot();
 
 
     // Set up the main window
