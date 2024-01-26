@@ -35,6 +35,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 
      key = new keypad;
+
+     h.vit_on(periodms);
+     h.vit_ontime(timeon);
 //    key->show();
 
 
@@ -204,8 +207,6 @@ void MainWindow::on_clickedbackspace()
         QString data = lineEdit->text();
         data.chop(1);
         lineEdit->setText(data);
-
-
 
     }
     if(lineEdit_2->focusWidget())
