@@ -1,5 +1,6 @@
 TEMPLATE = lib
 CONFIG += staticlib
+TARGET = vitrectomy
 QT       += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
